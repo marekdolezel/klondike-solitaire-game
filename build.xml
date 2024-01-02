@@ -1,0 +1,53 @@
+<project name="SolitaireProject" default="compile" basedir=".">
+    <!-- Set up some properties -->
+    <property name="src.dir"     value="src"/>
+    <property name="build.dir"   value="build"/>
+    <property name="docs.dir"    value="docs"/>
+    <property name="libs.dir"    value="lib"/>
+    <property name="resources.dir" value="resources"/>
+
+    <!-- Define the classpath -->
+    <path id="classpath">
+        <fileset dir="${libs.dir}" includes="*.jar"/>
+    </path>
+
+    <!-- Clean target -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${docs.dir}"/>
+    </target>
+
+    <!-- Javadoc generation target -->
+    <target name="doc">
+        <mkdir dir="${docs.dir}"/>
+        <javadoc sourcepath="${src.dir}" destdir="${docs.dir}">
+            <classpath refid="classpath"/>
+        </javadoc>
+    </target>
+
+    <!-- Compile target -->
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+            <classpath refid="classpath"/>
+        </javac>
+        <copy todir="${build.dir}">
+            <fileset dir="${resources.dir}" includes="**/*"/>
+        </copy>
+    </target>
+
+    <!-- Run target -->
+    <target name="run" depends="compile">
+        <java classname="gui.Solitaire" fork="true">
+            <classpath>
+                <pathelement path="build"/>
+                <fileset dir="lib" includes="*.jar"/>
+            </classpath>
+        </java>
+    </target>
+
+
+    <!-- Main target to compile and generate docs -->
+    <target name="all" depends="clean, compile, doc"/>
+
+</project>

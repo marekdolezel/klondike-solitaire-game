@@ -1,0 +1,22 @@
+[Stock]
+content = 06D 08C 05C 03D 04H 05H  
+
+[Waste]
+content = 10C 13S 12C 10D 11D  
+
+[Table]
+content0 = | 09S 08D 07S  
+content1 = | 12D 11C 10H 09C 08H 07C 06H 05S 04D  
+content2 = empty
+content3 = | 13C 12H 11S  
+content4 = | 13D 12S 11H 10S 09D 08S 07H 06S 05D 04C 03H  
+content5 = | 13H  
+content6 = 09H 04S | 07D 06C  
+
+[Foundation]
+content0 = 01C 02C 03C  
+content1 = 01S 02S 03S  
+content2 = 01H 02H  
+content3 = 01D 02D  
+
+
