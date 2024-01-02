@@ -1,49 +1,52 @@
-# Solitaire Hra
+# Solitaire Game
 
-Solitaire, známá také jako Klondike, je oblíbená karetní hra pro jednoho hráče s bohatou historií a jednoduchými pravidly.
+Solitaire, also known as Klondike, is a popular card game for one player with a rich history and simple rules.
 
-## Instalace
+## Installation
 
-1. Naklonujte repozitář do svého lokálního prostředí:
+1. Clone the repository to your local environment:
    ```bash
-   git clone [odkaz na repozitář]
+   git clone git@github.com:marekdolezel/klondike-solitaire-game.git
    ```
-2. Přejděte do složky projektu:
+2. Navigate to the project folder:
    ```bash
-   cd [název složky projektu]
+   cd klondike-solitaire-game
    ```
 
-## Sestavení
+## Build
 
-Projekt je sestaven pomocí nástroje Apache Ant. Pro sestavení spusťte následující příkaz ve složce projektu:
+The project is built using the Apache Ant tool. To build, run the following command in the project folder:
 
 ```bash
 ant compile
 ```
+> **__Note__**: In the event of compilation failure, ensure you have a JDK version earlier than 11, necessary for this program.
+> You can list available JDKs on your system using the command `/usr/libexec/java_home -V`. 
+> To select an appropriate JDK version, set the JAVA_HOME environment variable. Use the command `export JAVA_HOME=[Your JDK Path]`,
+> replacing '[Your JDK Path]' with the path to your chosen JDK, which should be a version prior to JDK 11.
+## Execution
 
-## Spuštění
-
-Po sestavení můžete hru spustit následujícím příkazem:
+After building, you can run the game with the following command:
 
 ```bash
 ant run
 ```
 
-## Hlavní Funkce
+## Key Features
 
-- Jednoduché uživatelské rozhraní.
-- Klasická hra Solitaire (Klondike).
-- Možnost ukládat a načítat hru.
+- Simple JavaFX user interface.
+- Classic Solitaire (Klondike) game.
+- Ability to save and load a game.
 
-## Licencování
+## Licensing
 
-Tento projekt je distribuován pod [zvolenou licencí].
+This project is distributed under [chosen license].
 
-## Autoři
+## Authors
 
 - Marek Doležel
 - Radim Červinka
 
 ---
 
-Vytvořeno v rámci kursu IJA, VUT FIT.
+Created as part of the IJA course, VUT FIT.
